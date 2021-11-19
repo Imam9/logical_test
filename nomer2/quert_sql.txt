@@ -1,0 +1,4 @@
+SELECT *, MAX(nilai) AS nilai_tertinggi FROM tb_mahasiswa m 
+INNER JOIN tb_mahasiswa_nilai tmn ON tmn.mhs_id = m.mhs_id
+INNER JOIN tb_matakuliah mt ON mt.mk_id = tmn.mk_id
+WHERE mhs_nama = 'Sari' AND mt.mk_kode = 'MK303';
